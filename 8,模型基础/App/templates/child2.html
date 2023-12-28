@@ -1,0 +1,8 @@
+{% extends 'child.html' %}
+
+{%  block head %}
+{#    使用super()会把继承的父类的内容显示出来, 否则只显示本页面内容#}
+{#    {{ super() }}#}
+    <p>Child2-Html</p>
+{% endblock %}
+

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> 主页 </title>
+
+    </head>
+    <body>
+        {% if username %}
+            <p>
+                当前登录用户: {{ username }}
+                <a href="/logout">注销</a>
+            </p>
+        {% else %}
+            <a href="/login/">登录</a>
+        {% endif %}
+        <h2>用户主页</h2>
+        <hr>
+
+
+    </body>
+</html>

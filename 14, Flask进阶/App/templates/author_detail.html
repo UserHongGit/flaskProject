@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> 作者详情 </title>
+
+    </head>
+    <body>
+        <h2>作者详情</h2>
+        <hr>
+        <p>
+            作者名称:
+                {{ author.name }}
+        </p>
+        <p>
+            作者email{{ author.email }}
+        </p>
+        重点反向关联该作者的书籍信息:
+        <p>
+            {% for book in author.books %}
+                <a href="/book_detail/{{ book.id }}/">{{ book.title }}</a>
+            {% endfor %}
+        </p>
+
+    </body>
+</html>

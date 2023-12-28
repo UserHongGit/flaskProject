@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> 书籍详情 </title>
+
+    </head>
+    <body>
+        <h4>书籍详情</h4>
+        <hr>
+        <p>
+            书籍标题:     {{ book.title }}
+        </p>
+        <p>
+            书籍出版时间:     {{ book.date }}
+        </p>
+        <p>
+            作者(重点,反向关联取作者信息):
+            <a href="/author_detail/{{ book.author.id }}/">{{ book.author.name }}</a>
+        </p>
+        <p>出版社:
+            {% for e in book.publishers %}
+                <a href="/pub_detail/{{ e.id}}/">{{ e.name }}</a>
+            {% endfor %}
+        </p>
+
+    </body>
+</html>

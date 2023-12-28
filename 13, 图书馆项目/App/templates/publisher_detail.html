@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> 出版社详情 </title>
+
+    </head>
+    <body>
+        <h2>出版社详情</h2>
+        <hr>
+        <p>
+            出版社名称:{{ pub.name }}
+        </p>
+        <p>
+            出版社地址:{{ pub.address }}
+        </p>
+        反向关联出版社出版了那些书的数据:
+        <p>
+            {% for book in pub.books %}
+                <a href="/book_detail/{{ book.id }}/">{{ book.title }}</a>
+            {% endfor %}
+            
+        </p>
+
+    </body>
+</html>

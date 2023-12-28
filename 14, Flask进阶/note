@@ -1,0 +1,13 @@
+使用前先安装依赖
+workon flask2env
+安装flask-caching
+pip install flask-caching
+在exts.py里导入使用
+    from flask_caching import Cache
+
+    cache = Cache(
+        config={'CACHE_TYPE':'simple'} #缓存类型
+    )
+
+   cache.init_app(app=app)
+

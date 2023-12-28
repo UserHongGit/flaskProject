@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> 标题 </title>
+
+    </head>
+    <body>
+        <h2> Home</h2>
+
+        <hr>
+        <h4>变量:</h4>
+        <p>name:{{ name }}</p>
+        <p>age:{{ age }}</p>
+        <p>likes:{{ likes }}</p>
+
+        <hr>
+        <h4>标签:</h4>
+        <h5>if 语句:</h5>
+        {% if age>=18 %}
+            <p>{{ name }}已经成年了!</p>
+        {% elif age >=6 %}
+            <p>{{ name }}可以上学了!</p>
+        {% else %}
+            <p>{{ name }}还是小孩</p>
+        {% endif %}
+
+
+        <hr>
+        <h5>for循环</h5>
+        {%  for like in likes %}
+            <p>{{ like }}</p>
+            index: {{ loop.index }}
+            index0: {{ loop.index0 }}
+            revindex: {{ loop.revindex }}
+            revindex0: {{ loop.revindex0 }}
+
+            <br><br><br>
+            {% if loop.first %}
+                <p style="color: red">{{ like }}</p>
+            {% elif loop.last %}
+                <p style="color: blue">{{ like }}</p>
+            {% else %}
+                <p >{{ like }}</p>
+            {% endif %}
+
+
+{#            循环出现问题就会执行else里的雨具#}
+        {% else %}
+            <b>循环出现问题就会执行else里的雨具</b>
+        {% endfor %}
+
+    </body>
+</html>

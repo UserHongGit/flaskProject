@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> 书籍列表 </title>
+
+    </head>
+    <body>
+        <h2>书籍列表</h2>
+
+        <hr>
+
+        普通循环的方式:
+        <url>
+            {% for book in  books%}
+                <li>
+                    <a href="/book_detail/{{ book.id }}">{{ book.title }}</a>
+                    </li>
+            {% endfor %}
+
+        </url>
+        <hr>
+        蓝图名称.函数名字的请求方式:
+        <url>
+            {% for book in books %}
+                <li>
+                    <a href="{{ url_for('book_blue.book_detail',book_id=book.id) }}">{{ book.title }} </a>
+                </li>
+            {% endfor %}
+
+        </url>
+
+
+    </body>
+</html>

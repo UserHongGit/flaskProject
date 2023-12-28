@@ -1,0 +1,15 @@
+数据迁移的详细步骤:
+1, 安装好数据迁移的包  flask-sqlalchemy和flask-migrate
+2, 在exts.py中初始化Migrate和SQLAlchemy
+3, 在models中定义好模型
+4, 在views.py中一定要导入models模块
+       from .models import *
+5, 配置好数据库(sqlite或者mysql)
+6, 执行数据迁移命令:
+    a, 在cmd或者Terminal进入项目目录(app.py所在目录)
+    b, 然后输入命令:
+            flask db init  创建迁移文件夹migrates, 只调用一次
+            flask db migrate  生成迁移文件
+            flask db upgrade  执行迁移文件中的升级
+            flask db downgrade  执行迁移文件中的降级
+7, 使用Navicat查看数据库内容

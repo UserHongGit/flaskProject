@@ -1,0 +1,13 @@
+安装restful插件
+    pip install flask-restful
+extx.py导入
+    from flask_restful import Api
+
+    api = Api()
+
+    api.init_app(app=app)
+
+不需要使用蓝图了, 也不需要使用views.py了
+    删除views.py
+    删除init.py里注册蓝图的代码
+

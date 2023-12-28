@@ -1,0 +1,40 @@
+图书馆项目
+    作者:数据 -> 1:n  一本书只由一个作者完成, 一个作者可以创作多本书
+    出版社: 书籍 -> n:n   一个出版社可以出版多本书, 一本书也可以由多个出版社出版
+
+要求:
+    1.在书籍的book_index.htm1中有一个"查看所有书籍”的超链接按钮，点击进入书籍列表book_list.html页面
+    2.在书箱的book_list,htm1中显示所有书名，点击书名可以进入书箱详情book_detail.html
+    3.在书箱book_detai1.html中可以点击该书的作者和出版社，进入作者详情的author_detal.html和出版社详情的publisher_detail.html页掌
+
+
+
+需要的测试数据准备, 在flask db迁移后使用
+INSERT INTO `author` VALUES (1, '吴承恩', 88, 1, 'wuchengen@.com');
+INSERT INTO `author` VALUES (2, '红楼梦作者', 44, 0, 'hongloumeng@.com');
+INSERT INTO `author` VALUES (3, '水浒传作者', 55, 1, 'shuihuzhuan@.com');
+INSERT INTO `author` VALUES (4, '通用作者', 66, 1, 'tongyong@.com');
+
+
+INSERT INTO `book` VALUES (1, '西游记', '2023-12-27 16:22:36', 4);
+INSERT INTO `book` VALUES (2, '水浒传', '2023-12-27 16:24:50', 4);
+INSERT INTO `book` VALUES (3, '红楼梦', '2023-12-27 16:25:13', 4);
+
+
+INSERT INTO `book_publisher` VALUES (1, 1);
+INSERT INTO `book_publisher` VALUES (1, 2);
+INSERT INTO `book_publisher` VALUES (1, 3);
+INSERT INTO `book_publisher` VALUES (2, 3);
+INSERT INTO `book_publisher` VALUES (3, 3);
+
+
+INSERT INTO `publisher` VALUES (1, '清华出版社', '清华', '北京', '北京', '中国', 'www.qinghua.com');
+INSERT INTO `publisher` VALUES (2, '人民出版社', '人民', '上海', '上海', '中国', 'www.shanghai.com');
+INSERT INTO `publisher` VALUES (3, '广东出版社', '深圳', '深圳', '广东', '中国', 'www.guangdong.com');
+
+
+
+
+
+
+
